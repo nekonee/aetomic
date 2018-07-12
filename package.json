@@ -1,0 +1,24 @@
+{
+  "name": "aetomic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nekonee/aetomic.git"
+  },
+  "keywords": [
+    "React",
+    "Electron",
+    "aetomic"
+  ],
+  "author": "nekonee",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nekonee/aetomic/issues"
+  },
+  "homepage": "https://github.com/nekonee/aetomic#readme"
+}
