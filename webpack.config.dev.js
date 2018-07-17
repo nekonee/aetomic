@@ -33,6 +33,7 @@ const config = {
         
         test: /\.jsx?/,
         loader: 'babel-loader'
+        include: APP_DIR
         
       },
       
