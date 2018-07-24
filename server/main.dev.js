@@ -1,5 +1,5 @@
 const { default: installExtension, REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } = require('electron-devtools-installer');
-const{ app, ipcMain, nativeImage, BrowserWindow, Menu } = require('electron');
+const{ app, nativeImage, BrowserWindow, Menu } = require('electron');
 const platform = require('electron-platform');
 const path = require('path');
 const url = require('url');
