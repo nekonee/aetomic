@@ -3,8 +3,6 @@ const{ app, nativeImage, BrowserWindow, Menu } = require('electron');
 const platform = require('electron-platform');
 const path = require('path');
 const url = require('url');
-const getOption = require('./store').getOption;
-
 
 function makeWindow(){
   win = new BrowserWindow({

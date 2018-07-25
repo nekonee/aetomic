@@ -4,8 +4,7 @@ const hP = require("happypack");
 
 
 module.exports = env => {
-  let entry = env && env.LINUX ? "./server/main.dev.linux.js" :
-      "/server/main.dev.js";
+  let entry =  "/server/main.dev.js";
 
   return {
     entry: entry,
