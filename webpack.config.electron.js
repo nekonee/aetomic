@@ -1,10 +1,10 @@
 const webpack = require("webpack");
 const path = require("path");
-const hP = require("happypack");
+const happypack = require("happypack");
 
 
 module.exports = env => {
-  let entry =  "/server/main.dev.js";
+  let entry =  "./server/main.dev.js";
 
   return {
     entry: entry,
@@ -12,11 +12,12 @@ module.exports = env => {
       path: __dirname,
       filename: "bundle.electron.js"
     },
+    mode: "development",
     module: {
       rules: [
         {
           test: /.jsx?$/,
-          use: "hP/loader?id=jsx",
+          use: "happypack/loader?id=jsx",
           exclude: /node-modules/
         },
         {
@@ -27,7 +28,7 @@ module.exports = env => {
     },
     plugins: [
       new webpack.NamedModulesPlugin(),
-      new hP({
+      new happypack({
         id: "jsx",
         loaders: [ "babel-loader" ]
       })
