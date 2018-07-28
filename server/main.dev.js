@@ -17,7 +17,7 @@ function makeWindow(){
     
   });
 
-  win.setTitle('aetomic');
+  win.setTitle(`aetomic`);
 
   win.loadUrl(url.format({
     pathname: 'localhost:8080',
@@ -28,16 +28,16 @@ function makeWindow(){
   win.once('ready-to-show', () =>
            win.show()
           );
+  
+  win.on('closed', () => {
+    win = null;
+  });
+
+  win.webContents.openDevTools();
+
+  app.on('ready', createWindow);
+
+  app.on('window-all-closed', () => {
+    app.quit();
+  });
 };
-
-win.on('closed', () => {
-  win = null;
-});
-
-win.webContents.openDevTools();
-
-app.on('ready', createWindow);
-
-app.on('window-all-closed', () => {
-  app.quit();
-});

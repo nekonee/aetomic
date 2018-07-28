@@ -1,9 +1,9 @@
 const webpack = require("webpack");
 const path = require("path");
 
-const BUILD_DIR = resolve(__dirname, "dist");
-const APP_DIR = resolve(__dirname, "app");
-const RESOURCES_DIR = resolve(__dirname, "resources");
+const BUILD_DIR = resolve(__dirname, "dist/");
+const APP_DIR = resolve(__dirname, "app/");
+const RESOURCES_DIR = resolve(__dirname, "resources/");
 
 const config = {
   entry: [
