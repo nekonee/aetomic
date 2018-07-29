@@ -1,9 +1,10 @@
 const webpack = require("webpack");
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const BUILD_DIR = resolve(__dirname, "dist/");
-const APP_DIR = resolve(__dirname, "app/");
-const RESOURCES_DIR = resolve(__dirname, "resources/");
+const BUILD_DIR = path.resolve(__dirname, "dist/");
+const APP_DIR = path.resolve(__dirname, "app/");
+const RESOURCES_DIR = path.resolve(__dirname, "resources/");
 
 const config = {
   entry: [
@@ -32,7 +33,7 @@ const config = {
       {
         
         test: /\.jsx?/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
         include: APP_DIR
         
       },
@@ -64,7 +65,7 @@ const config = {
   },
   
   plugins: [
-    new webpack.HotModuleReplacementPugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: 'index.html',

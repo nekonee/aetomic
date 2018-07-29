@@ -3,6 +3,7 @@ const{ app, nativeImage, BrowserWindow, Menu } = require('electron');
 const platform = require('electron-platform');
 const path = require('path');
 const url = require('url');
+let win;
 
 function makeWindow(){
   win = new BrowserWindow({
@@ -19,7 +20,7 @@ function makeWindow(){
 
   win.setTitle(`aetomic`);
 
-  win.loadUrl(url.format({
+  win.loadURL(url.format({
     pathname: 'localhost:8080',
     protocol: 'http',
     slashes: true
@@ -34,10 +35,11 @@ function makeWindow(){
   });
 
   win.webContents.openDevTools();
+};
 
-  app.on('ready', createWindow);
+  app.on('ready', makeWindow);
 
   app.on('window-all-closed', () => {
     app.quit();
   });
-};
+
