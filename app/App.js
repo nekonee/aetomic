@@ -5,7 +5,7 @@ import Footer from './elements/Footer';
 import SideBar from './elements/SideBar';
 
 import styles from './App_styles.scss';
-
+import styles_css from './styles.css';
 
 class App extends React.Component{
   render() {
