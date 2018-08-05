@@ -1,8 +1,8 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
 
-import Footer from './elements/Footer';
-import SideBar from './elements/SideBar';
+import Header from './elements/Header/';
+import SidePanel from './elements/SidePanel/';
 
 import styles from './App_styles.scss';
 import styles_css from './styles.css';
@@ -14,11 +14,8 @@ class App extends React.Component{
     } = this.props;
     return(
       <div className='main-window'>
-        <span>
-          Dupacyce
-        </span>
-        <SideBar />
-        <Footer />
+        <SidePanel />
+        <Header />
       </div>
     );
   }
