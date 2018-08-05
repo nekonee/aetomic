@@ -42,7 +42,8 @@ const config = {
         
         test: /\.css/,
         loader:
-        "style-loader!css-loader?modules=true&localIndentName=[name]__[local]__[hash:bae64:5]"
+        "style-loader!css-loader?modules=true&localIndentName=[name]__[local]__[hash:bae64:5]",
+        include: APP_DIR
         
       },
       
@@ -50,7 +51,8 @@ const config = {
         
         test: /\.scss$/,
         loader:
-        'style-loader!css-loader?importLoaders=1&modules&localIdentName=[local]!sass-loader'
+        'style-loader!css-loader?importLoaders=1&modules&localIdentName=[local]!sass-loader',
+        include: APP_DIR
         
       },
 
